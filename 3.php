@@ -59,13 +59,13 @@ https://www.codepile.net/pile/R2K5d68z
                 ]
             ],
         ];
-        var_dump($posts);
+        // var_dump($posts);
 
 
-        foreach(array_keys($posts) as $date){
-            echo $date . "<br>";
-            for ($i=0; $i < count($date); $i++) { 
-                echo $date[$i]['title'];
+        foreach($posts as $date => $dettagli){
+            echo "{$date} <br>";
+            foreach ($dettagli as $dettaglio){
+                echo "{$dettaglio['title']} <br> {$dettaglio['author']} <br> {$dettaglio['text']} <br> <br>";
             }
         }
 
