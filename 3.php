@@ -61,8 +61,13 @@ https://www.codepile.net/pile/R2K5d68z
         ];
         var_dump($posts);
 
-        foreach(array_keys($posts) as $date)
-        echo $date . "<br>";
+
+        foreach(array_keys($posts) as $date){
+            echo $date . "<br>";
+            for ($i=0; $i < count($date); $i++) { 
+                echo $date[$i]['title'];
+            }
+        }
 
     ?>
      
