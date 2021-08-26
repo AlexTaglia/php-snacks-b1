@@ -49,14 +49,17 @@ rettangolo verde.
         ]
     ];
 
-    for ($i=0; $i < count($db) ; $i++) { 
+    for ($i = 0; $i < count($db); $i++ ) {
+        if($db['teachers']){
+            echo "<div class='teachers'>{$db['teachers'][$i]['name']} {$db['teachers'][$i]['lastname']} </div>";
+        };
 
+        if($db['pm']){
+            echo "<div class='pm'>{$db['pm'][$i]['name']} {$db['pm'][$i]['lastname']} </div>";
+        }
     }
 
-
-
 ?>
-
 
 </body>
 </html>
